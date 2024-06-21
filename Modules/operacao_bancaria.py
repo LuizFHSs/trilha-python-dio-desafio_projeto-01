@@ -8,7 +8,7 @@ def deposito(valor_deposito):
         saldo += valor_deposito
         extratos.append(f"Depósito de R$ {valor_deposito:.2f}")
     else:
-        print("Operação falhou! valor informado é inválido.")
+        print("\nOperação falhou! valor informado é inválido.\n")
 
 def saque(valor_saque):
     # 3 saques diarios
@@ -22,13 +22,13 @@ def saque(valor_saque):
             extratos.append(f"Saque de R$ {valor_saque:.2f}")
             contador_saque += 1
         else:
-            print("Operação falhou! saldo insuficiente ou valor limite de saque ultrapassado!")
+            print("\nOperação falhou! saldo insuficiente ou valor limite de saque ultrapassado!\n")
     else:
-        print("Operação falhou! Limite de saque diário atendido.")
+        print("\nOperação falhou! Limite de saque diário atendido.\n")
 
 def extrato():
     if len(extratos) == 0:
-        print("Não foram realizadas movimentações.")
+        print("\nNão foram realizadas movimentações.\n")
     else:
         print()
         print("EXTRATO".center(22, '='))
