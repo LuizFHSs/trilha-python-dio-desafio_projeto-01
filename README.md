@@ -18,7 +18,7 @@ Criar um sistema bancário com as operações:
    Todos os depósitos devem ser exibidos na operação de extrato.
  + **Operação de saque**<br>
    O sistema deve permitir realizar 3 saques diários com limite máximo de quinhentos reais por saque.<br>
-   Caso o usuário não tenha saldo em conta, o sistema deve exibir uma mensagem informando que não será possível savar o dinheiro.<br>
+   Caso o usuário não tenha saldo em conta, o sistema deve exibir uma mensagem informando que não será possível sacar o dinheiro.<br>
    Todos os saques devem ser exibidos na operação de extrato.
  + **Operação de extrato**<br>
    Deve listar todos os depósitos e saques realizados na conta.<br>
