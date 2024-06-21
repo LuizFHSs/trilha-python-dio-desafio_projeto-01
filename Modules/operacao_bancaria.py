@@ -30,7 +30,11 @@ def extrato():
     if len(extratos) == 0:
         print("Não foram realizadas movimentações.")
     else:
+        print()
+        print("EXTRATO".center(22, '='))
         for saldos in range(len(extratos)):
             print(extratos[saldos])
         print(f"Saldo atual: R$ {saldo:.2f}")
+        print("=".center(22, '='))
+        print()
        
