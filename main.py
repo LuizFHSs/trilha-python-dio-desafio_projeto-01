@@ -6,7 +6,8 @@ while True:
     1 PARA DEPOSITAR
     2 PARA SACAR
     3 PARA EXIBIR EXTRATO
-    4 PARA SAIR
+    4 PARA NOVO USUARIO
+    5 PARA SAIR
     """
     print(menu)
     opcao = int(input("Digite a opção: "))
@@ -20,6 +21,8 @@ while True:
     elif opcao == 3:
         ob.extrato()
     elif opcao == 4:
+        ob.criar_usuario()
+    elif opcao == 5:
         break
     else:
         print("Opção Inválida!")

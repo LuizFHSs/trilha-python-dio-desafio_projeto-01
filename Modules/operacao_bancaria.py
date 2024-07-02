@@ -1,5 +1,11 @@
+# Listas
 extratos = []
+usuarios = []
+
+# Floats
 saldo = 0.0
+
+# Ints
 contador_saque = 0
 
 def deposito(valor_deposito):
@@ -37,4 +43,23 @@ def extrato():
         print(f"Saldo atual: R$ {saldo:.2f}")
         print("=".center(22, '='))
         print()
-       
+
+# Adicionando duas novas funções CRIAR USUARIO E CRIAR CONTA
+
+def criar_usuario():
+    cadastrado = False
+
+    cpf = input("Informe seu CPF (somente numeros): ")
+
+    # Verificando na lista se já existe um cpf dentro do dicionario
+    for _ in usuarios:
+        if _.get("cpf") == cpf:
+            cadastrado = True
+            print("Usuario ja cadastrado")
+
+    if not cadastrado:
+        nome = input("Informe seu Nome: ")
+        data_nascimento = input("Informe sua Data de Nascimento (dd-mm-aaaa): ")
+        endereco = input("Informe seu Endereço (logradouro, nro - bairro - cidade/sigla estado): ")
+        usuario = dict(cpf = cpf, nome = nome, data_nascimento = data_nascimento, endereco = endereco)
+        usuarios.append(usuario)
