@@ -1,6 +1,7 @@
 # Listas
 extratos = []
 usuarios = []
+contas_corrente = []
 
 # Floats
 saldo = 0.0
@@ -46,12 +47,12 @@ def extrato():
 
 # Adicionando duas novas funções CRIAR USUARIO E CRIAR CONTA
 
-def criar_usuario():
+def novo_usuario():
     cadastrado = False
 
     cpf = input("Informe seu CPF (somente numeros): ")
 
-    # Verificando na lista se já existe um cpf dentro do dicionario
+    # Verificando na lista se já existe um cpf
     for _ in usuarios:
         if _.get("cpf") == cpf:
             cadastrado = True
@@ -63,3 +64,21 @@ def criar_usuario():
         endereco = input("Informe seu Endereço (logradouro, nro - bairro - cidade/sigla estado): ")
         usuario = dict(cpf = cpf, nome = nome, data_nascimento = data_nascimento, endereco = endereco)
         usuarios.append(usuario)
+
+def nova_conta_corrente():
+    AGENCIA = "0001"
+    numero_conta = len(contas_corrente) + 1
+    existe_usuario = False
+
+    print("\nNOVA CONTA CORRENTE DIO\n")
+    cpf = input("Informe seu CPF: ")
+
+    for _ in usuarios:
+        if _.get("cpf") == cpf:
+            existe_usuario = True
+            conta_corrente = dict(agencia=AGENCIA, numero_conta=numero_conta, usuario=cpf)
+            contas_corrente.append(conta_corrente)
+    
+    if not existe_usuario:
+        print("Não é possível cria uma conta corrente, pois não existe um usuário com este CPF.")
+        print("Cadastre um novo usuário para poder criar uma conta corrente!\n")
