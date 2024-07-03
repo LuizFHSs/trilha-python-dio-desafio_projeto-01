@@ -45,8 +45,6 @@ def extrato():
         print("=".center(22, '='))
         print()
 
-# Adicionando duas novas funções CRIAR USUARIO E CRIAR CONTA
-
 def novo_usuario():
     cadastrado = False
 
@@ -56,7 +54,7 @@ def novo_usuario():
     for _ in usuarios:
         if _.get("cpf") == cpf:
             cadastrado = True
-            print("Usuario ja cadastrado")
+            print("Usuário já cadastrado!")
 
     if not cadastrado:
         nome = input("Informe seu Nome: ")
