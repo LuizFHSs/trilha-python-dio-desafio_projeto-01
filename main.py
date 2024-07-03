@@ -28,11 +28,19 @@ while True:
     elif opcao == 5:
         ob.nova_conta_corrente()
     elif opcao == 6:
+        print()
+        print("Usuários DIO".center(22, "="))
         for _ in ob.usuarios:
             print(_.get("nome"))
+        print("=".center(22, "="))
+        print()
     elif opcao == 7:
+        print()
+        print("DIO | Contas Corrente".center(22, "="))
         for _ in ob.contas_corrente:
-            print(f"Conta: {_.get("numero_conta")}\tTitular: {_.get("usuario")}")
+            print(f"Conta Corrente: {_.get("numero_conta")}\tTitular: {_.get("usuario")}")
+        print("=".center(22, "="))
+        print()
     elif opcao == 8:
         break
     else:

@@ -54,7 +54,7 @@ def novo_usuario():
     for _ in usuarios:
         if _.get("cpf") == cpf:
             cadastrado = True
-            print("Usuário já cadastrado!")
+            print("\nUsuário já cadastrado!\n")
 
     if not cadastrado:
         nome = input("Informe seu Nome: ")
@@ -62,6 +62,8 @@ def novo_usuario():
         endereco = input("Informe seu Endereço (logradouro, nro - bairro - cidade/sigla estado): ")
         usuario = dict(cpf = cpf, nome = nome, data_nascimento = data_nascimento, endereco = endereco)
         usuarios.append(usuario)
+        print("\nUsuário Cadastrado com Sucesso!\n")
+        
 
 def nova_conta_corrente():
     AGENCIA = "0001"
@@ -76,7 +78,8 @@ def nova_conta_corrente():
             existe_usuario = True
             conta_corrente = dict(agencia=AGENCIA, numero_conta=numero_conta, usuario=cpf)
             contas_corrente.append(conta_corrente)
+            print("\nConta Corrente Criada com Sucesso!\n")
     
     if not existe_usuario:
-        print("Não é possível cria uma conta corrente, pois não existe um usuário com este CPF.")
+        print("\nNão é possível cria uma conta corrente, pois não existe um usuário com este CPF.")
         print("Cadastre um novo usuário para poder criar uma conta corrente!\n")
