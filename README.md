@@ -15,6 +15,9 @@ Criar um sistema bancário com as operações:
 + Sacar
 + Depositar
 + Visualizar extrato
+
+Novas funcionalidades:
+
 + Criar um usuário
 + Criar uma conta corrente
 
